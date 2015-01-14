@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Dathent_ShoppingCart>
+            <version>0.1</version>
+        </Dathent_ShoppingCart>
+    </modules>
+    <global>
+        <blocks>
+            <shoppingcart>
+                <class>Dathent_ShoppingCart_Block</class>
+            </shoppingcart>
+        </blocks>
+        <helpers>
+            <shoppingcart>
+                <class>Dathent_ShoppingCart_Helper</class>
+            </shoppingcart>
+        </helpers>
+    </global>
+    <frontend>
+        <routers>
+            <checkout>
+                <args>
+                    <modules>
+                        <Dathent_ShoppingCart before="Mage_Checkout">Dathent_ShoppingCart</Dathent_ShoppingCart>
+                    </modules>
+                </args>
+            </checkout>
+        </routers>
+    </frontend>
+</config>
