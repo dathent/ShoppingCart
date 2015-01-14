@@ -38,7 +38,11 @@ class Dathent_ShoppingCart_CartController extends Mage_Checkout_CartController
                 ->setWebsiteId(Mage::app()->getStore()->getWebsiteId())
                 ->loadByEmail($partnerEmail);
             if($partner->getId()){
-                $items = $this->_getCart()->getItems();
+                
+                /*$items = $this->_getCart()->getItems();
+                $cartPartner = Mage::getSingleton('checkout/cart')->getQoute();
+                $itrmsss = $cartPartner->getItems();
+                $cartPartner->removeAllItems()->setItems($items)->save();*/
 
             }
 
