@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <customer_account_edit>
+        <reference name="my.account.wrapper">
+            <block type="customer/form_edit" name="customer_partner_edit" template="shoppingcart/customer/edit.phtml" before="/" />
+        </reference>
+    </customer_account_edit>
+    <customer_account_index>
+        <reference name="my.account.wrapper">
+            <block type="customer/account_dashboard_info" name="customer_partner_info" template="shoppingcart/customer/partner_info.phtml" after="/" />
+        </reference>
+    </customer_account_index>
+</layout>

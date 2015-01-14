@@ -38,8 +38,8 @@
             </Dathent_ShoppingCart_read>
         </resources>
     </global>
-    <!--<frontend>
-        <routers>
+    <frontend>
+        <!--<routers>
             <checkout>
                 <args>
                     <modules>
@@ -47,6 +47,13 @@
                     </modules>
                 </args>
             </checkout>
-        </routers>
-    </frontend>-->
+        </routers>-->
+        <layout>
+            <updates>
+                <shoppingcart>
+                    <file>shoppingcart.xml</file>
+                </shoppingcart>
+            </updates>
+        </layout>
+    </frontend>
 </config>
