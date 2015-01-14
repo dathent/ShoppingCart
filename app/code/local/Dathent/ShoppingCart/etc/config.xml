@@ -6,7 +6,7 @@
         </Dathent_ShoppingCart>
     </modules>
     <global>
-        <blocks>
+        <!--<blocks>
             <shoppingcart>
                 <class>Dathent_ShoppingCart_Block</class>
             </shoppingcart>
@@ -15,9 +15,30 @@
             <shoppingcart>
                 <class>Dathent_ShoppingCart_Helper</class>
             </shoppingcart>
-        </helpers>
+        </helpers>-->
+        <resources>
+            <Dathent_ShoppingCart_setup>
+                <setup>
+                    <module>Dathent_ShoppingCart</module>
+                    <class>Mage_Customer_Model_Entity_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </Dathent_ShoppingCart_setup>
+            <Dathent_ShoppingCart_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </Dathent_ShoppingCart_write>
+            <Dathent_ShoppingCart_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </Dathent_ShoppingCart_read>
+        </resources>
     </global>
-    <frontend>
+    <!--<frontend>
         <routers>
             <checkout>
                 <args>
@@ -27,5 +48,5 @@
                 </args>
             </checkout>
         </routers>
-    </frontend>
+    </frontend>-->
 </config>
