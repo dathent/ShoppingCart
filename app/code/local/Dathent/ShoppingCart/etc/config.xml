@@ -6,16 +6,17 @@
         </Dathent_ShoppingCart>
     </modules>
     <global>
-        <!--<blocks>
-            <shoppingcart>
-                <class>Dathent_ShoppingCart_Block</class>
-            </shoppingcart>
-        </blocks>
+        <!--
         <helpers>
             <shoppingcart>
                 <class>Dathent_ShoppingCart_Helper</class>
             </shoppingcart>
         </helpers>-->
+        <models>
+            <shoppingcart>
+                <class>Dathent_ShoppingCart_Model</class>
+            </shoppingcart>
+        </models>
         <resources>
             <Dathent_ShoppingCart_setup>
                 <setup>
@@ -37,9 +38,19 @@
                 </connection>
             </Dathent_ShoppingCart_read>
         </resources>
+        <events>
+            <customer_save_before>
+                <observers>
+                    <shoppingcart>
+                        <class>shoppingcart/observer</class>
+                        <method>checkPartner</method>
+                    </shoppingcart>
+                </observers>
+            </customer_save_before>
+        </events>
     </global>
     <frontend>
-        <!--<routers>
+        <routers>
             <checkout>
                 <args>
                     <modules>
@@ -47,7 +58,7 @@
                     </modules>
                 </args>
             </checkout>
-        </routers>-->
+        </routers>
         <layout>
             <updates>
                 <shoppingcart>
